@@ -1,8 +1,158 @@
+/* General Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&display=swap');
+
 * {
     margin: 0;
-    font-size: 18px;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;;
+    color: rgb(95, 95, 95);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+    font-size: 1.5rem;
 }
 
 body {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "main main main"
+                         "footer footer footer";
+    max-width: 100vw;
+}
+
+header {
+    grid-area: header;
+    justify-self:center;
+    max-height: 1.5rem;
+    padding: 2rem;
     
+}
+
+nav {
+    display: grid;
+    grid-area: nav;
+    justify-items: center;
+    padding: 1rem;
+    background-color: rgb(181, 197, 165);
+    position: sticky;
+    top: 0px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: space-evenly;
+    text-align: center;
+    list-style: none;
+    gap: 5rem;
+    text-decoration: none;    
+}
+
+li {
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}
+
+main {
+    grid-area: main;
+}
+
+.hero {
+    background-image: url(/images/banner1.jpg);
+    background-size: cover;
+    height: 800px;
+    text-shadow: 1px 1px 10px rgb(59, 59, 59);
+    margin: 0;
+}
+
+.hero > p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: lighter;
+    text-align: center;
+    color: rgb(238, 238, 238);
+    backdrop-filter: blur(50px);
+    padding: 2rem;
+}
+
+img.logo {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 60%;
+  }
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.cards > h1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-weight: lighter;
+}
+
+article {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    border: 0;
+    border-radius: 20px;
+    padding: 1rem;
+    max-width: 20rem;
+    text-align: justify ;
+    background-color: rgb(181, 197, 165);
+    transition: all 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgb(192, 192, 192);
+    transition: all 0.2s ease;
+}
+
+article > img {
+    border-radius: 10px;
+}
+
+article > p {
+    padding: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 3rem;
+    padding: 1.5rem;
+    border-top: 1px solid rgb(192, 192, 192);
+    box-shadow: -2px 0px 10px rgb(192, 192, 192);
+}
+
+footer > p {
+    font-size: 15px;
 }
